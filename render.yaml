@@ -1,0 +1,34 @@
+# ==============================================================================
+# IRONFORGE FITNESS — Render Infrastructure as Code (Blueprint)
+# ==============================================================================
+services:
+  - type: web
+    name: ironforge-fitness
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_EMAIL
+        generateValue: false
+      - key: ADMIN_PASSWORD
+        generateValue: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ironforge-postgres
+          property: connectionString
+    disk:
+      name: ironforge-data
+      mountPath: /var/data
+      sizeGB: 1
+
+databases:
+  - name: ironforge-postgres
+    plan: starter
+    databaseName: ironforge_db
+    user: ironforge_admin
