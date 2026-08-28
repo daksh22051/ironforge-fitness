@@ -346,3 +346,27 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .programs-hero {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .programs-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .program-card-body {
+    padding: 1.25rem 1rem;
+  }
+
+  .program-metrics-row {
+    gap: 0.5rem;
+  }
+
+  .program-metric-badge {
+    font-size: 0.72rem;
+    padding: 3px 6px;
+  }
+}

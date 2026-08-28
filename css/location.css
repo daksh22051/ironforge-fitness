@@ -537,3 +537,34 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .loc-hero-section {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .loc-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .loc-glance-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .loc-find-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .loc-find-map-wrapper {
+    min-height: 260px;
+  }
+
+  .loc-map-btn-overlay {
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.72rem;
+    padding: 0.5rem 0.85rem;
+  }
+}

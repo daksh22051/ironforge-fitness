@@ -400,3 +400,37 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .fac-hero {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .fac-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .fac-hero-lead {
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fac-filter-bar {
+    gap: 0.35rem;
+  }
+
+  .fac-filter-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.76rem;
+  }
+
+  .fac-zone-body {
+    padding: 1.25rem 1rem;
+  }
+
+  .fac-amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

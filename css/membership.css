@@ -799,3 +799,78 @@
     align-items: center;
   }
 }
+
+@media (max-width: 480px) {
+  .mem-hero-section {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .mem-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .mem-hero-lead {
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mem-billing-toggle-wrapper {
+    padding: 3px;
+    max-width: 100%;
+  }
+
+  .mem-toggle-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.76rem;
+    gap: 4px;
+  }
+
+  .mem-discount-pill {
+    padding: 1px 5px;
+    font-size: 0.62rem;
+  }
+
+  .mem-pricing-card,
+  .mem-pass-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .mem-card-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .mem-tier-title {
+    font-size: 1.25rem;
+  }
+
+  .mem-price-amt {
+    font-size: 2.25rem;
+  }
+
+  .mem-feature-item {
+    font-size: 0.84rem;
+  }
+
+  .mem-modal-container {
+    padding: 1.25rem 1rem;
+    max-width: 95vw;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .mem-toggle-btn {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .mem-discount-pill {
+    display: none;
+  }
+
+  .mem-pricing-card,
+  .mem-pass-card {
+    padding: 1.25rem 0.85rem;
+  }
+}

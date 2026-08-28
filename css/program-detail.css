@@ -451,6 +451,11 @@
 }
 
 @media (max-width: 768px) {
+  .pd-hero {
+    padding-top: calc(85px + 1.5rem);
+    padding-bottom: 2.25rem;
+  }
+
   .pd-specs-strip {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -470,5 +475,34 @@
 
   .pd-inclusions-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pd-hero {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .pd-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .pd-specs-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-spec-item {
+    border-right: none;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 0.85rem 0.5rem;
+  }
+
+  .pd-spec-item:last-child {
+    border-bottom: none;
+  }
+
+  .pd-exercise-card {
+    padding: 1.25rem 1rem;
   }
 }

@@ -244,3 +244,18 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .trainers-hero {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .trainers-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .trainer-card-content {
+    padding: 1.25rem 1rem;
+  }
+}

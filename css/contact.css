@@ -343,3 +343,30 @@
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-section-wrapper {
+    padding-top: calc(75px + 1.25rem);
+    padding-bottom: 2rem;
+  }
+
+  .contact-main-title {
+    font-size: 1.85rem;
+  }
+
+  .contact-main-lead {
+    font-size: 0.92rem;
+  }
+
+  .contact-form-box {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .contact-info-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .contact-info-list {
+    gap: 1rem;
+  }
+}
