@@ -2,26 +2,24 @@ const nodemailer = require('nodemailer');
 
 // Initialize Transporter using environment variables or fallback
 function createTransporter() {
-  const host = process.env.SMTP_HOST;
-  const port = parseInt(process.env.SMTP_PORT || '587', 10);
+  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const port = parseInt(process.env.SMTP_PORT || '465', 10);
   const user = (process.env.SMTP_USER || 'dakshkhamar22@gmail.com').trim();
   const rawPass = process.env.SMTP_PASS || 'yodmduorwcetblsm';
   const pass = rawPass.replace(/\s+/g, '').trim();
-  const service = process.env.SMTP_SERVICE || 'gmail';
 
-  if (service && user && pass) {
+  if (user && pass) {
     return nodemailer.createTransport({
-      service,
-      auth: { user, pass }
-    });
-  }
-
-  if (host && user && pass) {
-    return nodemailer.createTransport({
-      host,
-      port,
+      host: host,
+      port: port,
       secure: port === 465,
-      auth: { user, pass }
+      auth: {
+        user: user,
+        pass: pass
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
   }
 

@@ -338,7 +338,7 @@ const server = http.createServer((req, res) => {
       }
     });
 
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         if (!body) {
           return sendJson(res, 400, { success: false, message: 'Empty request payload.' });
@@ -432,11 +432,15 @@ const server = http.createServer((req, res) => {
           whatsappOptIn: Boolean(whatsappOptIn)
         };
 
-        // Asynchronously dispatch confirmation email to the user & admin notification
-        Promise.allSettled([
-          sendTrialConfirmationEmail(leadPayload),
-          sendAdminNewLeadNotification(leadPayload)
-        ]).catch(e => console.error('[EMAIL ERROR]', e));
+        // Dispatch confirmation email to the user & admin notification
+        try {
+          await Promise.allSettled([
+            sendTrialConfirmationEmail(leadPayload),
+            sendAdminNewLeadNotification(leadPayload)
+          ]);
+        } catch (e) {
+          console.error('[EMAIL DISPATCH ERROR]', e);
+        }
 
         return sendJson(res, 200, {
           success: true,
