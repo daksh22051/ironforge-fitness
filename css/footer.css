@@ -198,16 +198,72 @@
 .footer-brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 0.65rem;
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: 'Plus Jakarta Sans', var(--font-display, sans-serif);
   font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-primary);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: var(--space-4);
+  transition: opacity var(--transition-fast, 0.2s ease);
 }
+
+.footer-brand-logo:hover {
+  opacity: 0.9;
+}
+
+.footer-brand-logo .brand-icon-wrapper,
+.site-footer .brand-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(224, 40, 20, 0.15);
+  border: 1px solid rgba(224, 40, 20, 0.35);
+  border-radius: 8px;
+  color: #E02814;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.footer-brand-logo:hover .brand-icon-wrapper {
+  background: rgba(224, 40, 20, 0.25);
+  border-color: rgba(224, 40, 20, 0.5);
+  transform: scale(1.04);
+}
+
+.footer-brand-logo .brand-icon-svg,
+.site-footer .brand-icon-svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer-brand-logo .brand-text,
+.site-footer .brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-brand-logo .brand-name-main,
+.site-footer .brand-name-main {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.15rem;
+}
+
+.footer-brand-logo .brand-name-sub,
+.site-footer .brand-name-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  color: #E02814;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
 
 .footer-brand-tagline {
   font-family: var(--font-body);
