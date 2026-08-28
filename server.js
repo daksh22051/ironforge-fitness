@@ -31,6 +31,42 @@ const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || 'admin@ironforgefitness.demo').t
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'IronForge@Admin2026!';
 const SESSION_SECRET = process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex');
 
+const MIME_TYPES = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'application/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.webp': 'image/webp',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
+  '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
+  '.ttf': 'font/ttf'
+};
+
+function send404(res) {
+  const notFoundPath = path.join(__dirname, '404.html');
+  if (fs.existsSync(notFoundPath)) {
+    res.writeHead(404, {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+    });
+    fs.createReadStream(notFoundPath).pipe(res);
+  } else {
+    res.writeHead(404, {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
+    });
+    res.end('404 Not Found');
+  }
+}
+
 // In-Memory Session Cache: tokenId -> { email, createdAt, expiresAt }
 const activeSessions = new Map();
 const SESSION_DURATION_MS = 24 * 60 * 60 * 1000; // 24 Hours
@@ -203,22 +239,6 @@ const getMembershipsStmt = db.prepare(`
   FROM membership_enrollments
   ORDER BY id DESC
 `);
-
-const MIME_TYPES = {
-  '.html': 'text/html; charset=utf-8',
-  '.css': 'text/css; charset=utf-8',
-  '.js': 'text/javascript; charset=utf-8',
-  '.json': 'application/json; charset=utf-8',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon',
-  '.woff': 'font/woff',
-  '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf',
-};
 
 // Allowed Form Select Values for Server-Side Validation
 const ALLOWED_GOALS = [
@@ -970,11 +990,7 @@ const server = http.createServer((req, res) => {
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      res.writeHead(404, { 
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
-      });
-      res.end('404 Not Found');
+      send404(res);
       return;
     }
 

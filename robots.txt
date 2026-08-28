@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /admin/login
+Disallow: /api/
+Disallow: /scratch/
+
+Sitemap: https://ironforge-fitness.onrender.com/sitemap.xml
