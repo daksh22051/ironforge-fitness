@@ -77,12 +77,12 @@ function initNavbarScroll() {
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.mobile-toggle');
   const drawer = document.querySelector('.mobile-drawer');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-drawer-cta');
 
   if (!toggleBtn || !drawer) return;
 
   const openMenu = () => {
     toggleBtn.setAttribute('aria-expanded', 'true');
+    toggleBtn.classList.add('is-active');
     drawer.classList.add('is-open');
     drawer.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -90,12 +90,14 @@ function initMobileMenu() {
 
   const closeMenu = () => {
     toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.classList.remove('is-active');
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.stopPropagation();
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
     if (isExpanded) {
       closeMenu();
@@ -107,10 +109,18 @@ function initMobileMenu() {
   toggleBtn.addEventListener('click', toggleMenu);
 
   // Close when clicking any nav link inside drawer
+  const mobileLinks = drawer.querySelectorAll('a, button');
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeMenu();
     });
+  });
+
+  // Close when clicking outside header / drawer
+  document.addEventListener('click', (e) => {
+    if (drawer.classList.contains('is-open') && !drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
   });
 
   // Close with Escape key
