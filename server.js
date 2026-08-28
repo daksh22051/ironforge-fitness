@@ -432,15 +432,17 @@ const server = http.createServer((req, res) => {
           whatsappOptIn: Boolean(whatsappOptIn)
         };
 
-        // Dispatch confirmation email to the user & admin notification
-        try {
-          await Promise.allSettled([
-            sendTrialConfirmationEmail(leadPayload),
-            sendAdminNewLeadNotification(leadPayload)
-          ]);
-        } catch (e) {
-          console.error('[EMAIL DISPATCH ERROR]', e);
-        }
+        // Asynchronously dispatch confirmation email to the user & admin notification in background
+        setImmediate(async () => {
+          try {
+            await Promise.allSettled([
+              sendTrialConfirmationEmail(leadPayload),
+              sendAdminNewLeadNotification(leadPayload)
+            ]);
+          } catch (e) {
+            console.error('[EMAIL DISPATCH ERROR]', e);
+          }
+        });
 
         return sendJson(res, 200, {
           success: true,

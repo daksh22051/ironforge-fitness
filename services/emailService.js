@@ -17,6 +17,9 @@ function createTransporter() {
         user: user,
         pass: pass
       },
+      connectionTimeout: 7000,
+      greetingTimeout: 7000,
+      socketTimeout: 10000,
       tls: {
         rejectUnauthorized: false
       }
