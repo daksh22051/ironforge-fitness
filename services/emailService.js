@@ -4,9 +4,10 @@ const nodemailer = require('nodemailer');
 function createTransporter() {
   const host = process.env.SMTP_HOST;
   const port = parseInt(process.env.SMTP_PORT || '587', 10);
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-  const service = process.env.SMTP_SERVICE; // e.g. 'gmail'
+  const user = (process.env.SMTP_USER || 'dakshkhamar22@gmail.com').trim();
+  const rawPass = process.env.SMTP_PASS || 'yodmduorwcetblsm';
+  const pass = rawPass.replace(/\s+/g, '').trim();
+  const service = process.env.SMTP_SERVICE || 'gmail';
 
   if (service && user && pass) {
     return nodemailer.createTransport({
@@ -24,7 +25,6 @@ function createTransporter() {
     });
   }
 
-  // Fallback: If no SMTP credentials configured, create a mock logger transport
   return null;
 }
 
