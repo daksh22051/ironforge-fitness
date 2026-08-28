@@ -13,9 +13,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: ADMIN_EMAIL
-        generateValue: false
+        sync: false
       - key: ADMIN_PASSWORD
-        generateValue: false
+        sync: false
       - key: SESSION_SECRET
         generateValue: true
       - key: DATABASE_URL
