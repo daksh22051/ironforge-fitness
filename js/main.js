@@ -437,21 +437,25 @@ function initFreeTrialForm() {
                 WELCOME, ${firstName.toUpperCase()}!
               </h3>
               
-              <p style="font-size: 0.9rem; line-height: 1.55; color: #4B5563; max-width: 360px; margin: 0 auto 1.5rem auto;">
-                Your 7-day all-access trial pass has been generated. Show your QR pass at the front desk upon arrival.
+              <p style="font-size: 0.9rem; line-height: 1.55; color: #4B5563; max-width: 380px; margin: 0 auto 1.25rem auto;">
+                Your 7-day all-access pass is active! A full confirmation email with gym location and pass details has been sent to <strong>${emailVal}</strong>.
               </p>
 
-              <div style="background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1rem; margin-bottom: 1.5rem; text-align: left;">
+              <div style="background-color: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem; text-align: left;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.82rem;">
                   <span style="color: #64748B; font-weight: 600;">PASS ID:</span>
-                  <span style="color: #0F172A; font-weight: 800;">#IF-TRIAL-${data.leadId}</span>
+                  <span style="color: #0F172A; font-weight: 800;">#IF-TRIAL-${String(data.leadId).padStart(4, '0')}</span>
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.82rem;">
-                  <span style="color: #64748B; font-weight: 600;">PRIMARY GOAL:</span>
-                  <span style="color: #0F172A; font-weight: 700;">${goalVal}</span>
+                  <span style="color: #64748B; font-weight: 600;">DURATION:</span>
+                  <span style="color: #059669; font-weight: 700;">7 Days (Valid From Today)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.82rem;">
+                  <span style="color: #64748B; font-weight: 600;">LOCATION:</span>
+                  <span style="color: #0F172A; font-weight: 700;">S.G. Highway, Bodakdev</span>
                 </div>
                 <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
-                  <span style="color: #64748B; font-weight: 600;">PREFERRED TIME:</span>
+                  <span style="color: #64748B; font-weight: 600;">TIME SLOT:</span>
                   <span style="color: #0F172A; font-weight: 700;">${timeVal}</span>
                 </div>
               </div>

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { DatabaseSync } = require('node:sqlite');
+const { sendTrialConfirmationEmail, sendAdminNewLeadNotification } = require('./services/emailService');
 
 // Load environment variables from .env file if present
 function loadEnv() {
@@ -418,12 +419,31 @@ const server = http.createServer((req, res) => {
         // Insert into SQLite Database
         const createdAt = new Date().toISOString();
         const info = insertLeadStmt.run(name, normalizedPhone, email, goal, preferredTime, experience, whatsappOptIn, createdAt);
+        const leadId = Number(info.lastInsertRowid);
+
+        const leadPayload = {
+          leadId,
+          name,
+          phone: normalizedPhone,
+          email,
+          goal,
+          preferredTime,
+          experience,
+          whatsappOptIn: Boolean(whatsappOptIn)
+        };
+
+        // Asynchronously dispatch confirmation email to the user & admin notification
+        Promise.allSettled([
+          sendTrialConfirmationEmail(leadPayload),
+          sendAdminNewLeadNotification(leadPayload)
+        ]).catch(e => console.error('[EMAIL ERROR]', e));
 
         return sendJson(res, 200, {
           success: true,
-          message: 'Free trial request received.',
-          leadId: Number(info.lastInsertRowid),
+          message: 'Free trial pass generated and confirmation email dispatched.',
+          leadId: leadId,
           name: name,
+          email: email,
           goal: goal,
           preferredTime: preferredTime,
           experience: experience,
