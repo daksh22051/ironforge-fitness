@@ -34,7 +34,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: #6B7280;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.1rem;
 }
 
 .mem-breadcrumb a {
@@ -48,12 +48,12 @@
 }
 
 .mem-kicker {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #E02814;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   display: block;
 }
 
@@ -61,19 +61,19 @@
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-size: clamp(2.3rem, 1.9rem + 1.8vw, 3.4rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
   color: #0F172A;
   text-transform: uppercase;
-  margin: 0 auto 0.85rem auto;
+  margin: 0 auto 1.25rem auto;
   max-width: 760px;
 }
 
 .mem-hero-lead {
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #4B5563;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto 2.25rem auto;
 }
 
