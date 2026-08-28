@@ -408,8 +408,10 @@ a.footer-contact-val:hover {
 
 /* --- Responsive Breakpoints for Footer --- */
 @media (max-width: 1200px) {
-  .footer-main-grid {
+  .footer-main-grid,
+  .footer-main-grid.footer-4-col {
     grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: var(--space-8);
   }
 
   .footer-cta-col {
@@ -419,7 +421,8 @@ a.footer-contact-val:hover {
 }
 
 @media (max-width: 860px) {
-  .footer-main-grid {
+  .footer-main-grid,
+  .footer-main-grid.footer-4-col {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-8);
   }
@@ -435,15 +438,51 @@ a.footer-contact-val:hover {
   }
 }
 
-@media (max-width: 540px) {
-  .footer-main-grid {
+@media (max-width: 640px) {
+  .site-footer {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-6);
+  }
+
+  .footer-main-grid,
+  .footer-main-grid.footer-4-col {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-8);
+    margin-bottom: var(--space-10);
+  }
+
+  .footer-brand-col {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
+  }
+
+  .footer-social-list {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-contact-info {
+    gap: var(--space-3);
+  }
+
+  .footer-contact-val {
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .footer-bottom-bar {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-3);
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: var(--space-4);
   }
 }
