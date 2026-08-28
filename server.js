@@ -27,8 +27,8 @@ function loadEnv() {
 }
 loadEnv();
 
-const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || 'admin@ironforgefitness.demo').trim().toLowerCase();
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'IronForge@Admin2026!';
+const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || 'dakshkhamar22@gmail.com').trim().toLowerCase();
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Daksh123@';
 const SESSION_SECRET = process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex');
 
 const MIME_TYPES = {
