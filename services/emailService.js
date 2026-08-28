@@ -1,7 +1,11 @@
 const nodemailer = require('nodemailer');
 
-// Initialize Transporter using environment variables or fallback
-function createTransporter() {
+let cachedTransporter = null;
+
+// Initialize Transporter with pooling for lightning-fast delivery
+function getTransporter() {
+  if (cachedTransporter) return cachedTransporter;
+
   const host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const port = parseInt(process.env.SMTP_PORT || '465', 10);
   const user = (process.env.SMTP_USER || 'dakshkhamar22@gmail.com').trim();
@@ -9,7 +13,10 @@ function createTransporter() {
   const pass = rawPass.replace(/\s+/g, '').trim();
 
   if (user && pass) {
-    return nodemailer.createTransport({
+    cachedTransporter = nodemailer.createTransport({
+      pool: true,
+      maxConnections: 5,
+      maxMessages: 100,
       host: host,
       port: port,
       secure: port === 465,
@@ -17,13 +24,14 @@ function createTransporter() {
         user: user,
         pass: pass
       },
-      connectionTimeout: 7000,
-      greetingTimeout: 7000,
+      connectionTimeout: 8000,
+      greetingTimeout: 8000,
       socketTimeout: 10000,
       tls: {
         rejectUnauthorized: false
       }
     });
+    return cachedTransporter;
   }
 
   return null;
@@ -170,13 +178,14 @@ function generateTrialEmailHtml({ name, leadId, goal, preferredTime, phone }) {
  * Send Free Trial Confirmation Email
  */
 async function sendTrialConfirmationEmail(lead) {
-  const transporter = createTransporter();
+  const transporter = getTransporter();
   const htmlContent = generateTrialEmailHtml(lead);
   const passId = `#IF-TRIAL-${String(lead.leadId).padStart(4, '0')}`;
 
   const mailOptions = {
     from: process.env.SMTP_FROM || `"IRONFORGE FITNESS" <${process.env.ADMIN_EMAIL || 'dakshkhamar22@gmail.com'}>`,
     to: lead.email,
+    replyTo: process.env.ADMIN_EMAIL || 'dakshkhamar22@gmail.com',
     subject: `Your 7-Day Free Pass is Activated! (${passId}) - IRONFORGE FITNESS`,
     html: htmlContent,
     text: `Hi ${lead.name},\n\nYour 7-Day Free Trial Pass (${passId}) is now active!\n\nLocation: 4th Floor, Titanium Square, S.G. Highway, Bodakdev, Ahmedabad\nHours: Mon-Sun: 6:00 AM - 10:00 PM\nValid for 7 days from today.\n\nShow this email at the front desk upon arrival.\n\nBest,\nIRONFORGE FITNESS Team`
@@ -201,7 +210,7 @@ async function sendTrialConfirmationEmail(lead) {
  * Send Admin Notification Email when new lead registers
  */
 async function sendAdminNewLeadNotification(lead) {
-  const transporter = createTransporter();
+  const transporter = getTransporter();
   const passId = `#IF-TRIAL-${String(lead.leadId).padStart(4, '0')}`;
   const adminEmail = process.env.ADMIN_EMAIL || 'dakshkhamar22@gmail.com';
 
