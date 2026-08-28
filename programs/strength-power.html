@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>IRONFORGE FITNESS | Strength & Power</title>
+  <meta name="description" content="Master the barbell lifts with our periodized Strength & Power program at IRONFORGE FITNESS. Squat, bench, deadlift, and explosive power training in Ahmedabad.">
+  <meta name="keywords" content="Ironforge Fitness, STRENGTH & POWER, gym Ahmedabad, fitness program, strength training, personal coaching, hypertrophy, fat loss">
+  <meta name="author" content="IRONFORGE FITNESS">
+  <meta name="theme-color" content="#0E1017">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IRONFORGE FITNESS | Strength & Power">
+  <meta property="og:description" content="Master the barbell lifts with our periodized Strength & Power program at IRONFORGE FITNESS. Squat, bench, deadlift, and explosive power training in Ahmedabad.">
+  <meta property="og:image" content="/assets/images/program-strength.jpg">
+  <meta property="og:site_name" content="IRONFORGE FITNESS">
+
+  <!-- Fonts & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Design System CSS Stylesheets -->
+  <link rel="stylesheet" href="/css/variables.css?v=20260828">
+  <link rel="stylesheet" href="/css/reset.css?v=20260828">
+  <link rel="stylesheet" href="/css/typography.css?v=20260828">
+  <link rel="stylesheet" href="/css/layout.css?v=20260828">
+  <link rel="stylesheet" href="/css/components.css?v=20260828">
+  <link rel="stylesheet" href="/css/navbar.css?v=20260828">
+  <link rel="stylesheet" href="/css/program-detail.css?v=20260828">
+  <link rel="stylesheet" href="/css/floating-actions.css?v=20260828">
+  <link rel="stylesheet" href="/css/footer.css?v=20260828">
+  <link rel="stylesheet" href="/css/animations.css?v=20260828">
+</head>
+<body class="program-detail-body antialiased selection-accent">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       HEADER & STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav-wrapper" aria-label="Main Navigation">
+        
+        <!-- Brand Logo -->
+        <a href="/#hero" class="brand-logo" id="nav-brand-logo" aria-label="Ironforge Fitness Home">
+          <div class="brand-icon-wrapper" aria-hidden="true">
+            <svg class="brand-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 6h16v2H4V6zm1 3h14v2l-2 3H7L5 9zm4 6h6v4h3v2H6v-2h3v-4z"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name-main">IRONFORGE</span>
+            <span class="brand-name-sub">FITNESS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="desktop-nav" role="menubar">
+          <li role="none"><a href="/#hero" class="nav-link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/programs" class="nav-link active" role="menuitem">Programs</a></li>
+          <li role="none"><a href="/facilities" class="nav-link" role="menuitem">Facilities</a></li>
+          <li role="none"><a href="/trainers" class="nav-link" role="menuitem">Trainers</a></li>
+          <li role="none"><a href="/membership" class="nav-link" role="menuitem">Membership</a></li>
+          <li role="none"><a href="/transformations" class="nav-link" role="menuitem">Transformations</a></li>
+          <li role="none"><a href="/location" class="nav-link" role="menuitem">Location</a></li>
+          <li role="none"><a href="/contact" class="nav-link" role="menuitem">Contact</a></li>
+        </ul>
+
+        <!-- Right Action Button & Mobile Toggle -->
+        <div class="nav-actions">
+          <a href="/#contact" class="btn btn-primary btn-sm" id="nav-trial-btn">
+            <span>START FREE TRIAL</span>
+            <svg class="btn-icon btn-icon-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="mobile-nav-links">
+        <a href="/#hero" class="mobile-nav-link">Home</a>
+        <a href="/programs" class="mobile-nav-link active">Programs</a>
+        <a href="/facilities" class="mobile-nav-link">Facilities</a>
+        <a href="/trainers" class="mobile-nav-link">Trainers</a>
+        <a href="/membership" class="mobile-nav-link">Membership</a>
+        <a href="/transformations" class="mobile-nav-link">Transformations</a>
+        <a href="/location" class="mobile-nav-link">Location</a>
+        <a href="/contact" class="mobile-nav-link">Contact</a>
+      </div>
+      <div class="mobile-drawer-cta">
+        <a href="/#contact" class="btn btn-primary btn-md w-full" id="mobile-drawer-trial-btn">
+          <span>START FREE TRIAL</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="site-main">
+
+    <!-- ==========================================================================
+         SECTION 1 — HERO SECTION (White UI)
+         ========================================================================== -->
+    <section class="pd-hero" aria-labelledby="program-title">
+      <div class="container">
+        
+        <nav class="pd-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/#hero" class="pd-breadcrumb-link">Home</a>
+          <span class="pd-breadcrumb-sep">/</span>
+          <a href="/programs" class="pd-breadcrumb-link">Programs</a>
+          <span class="pd-breadcrumb-sep">/</span>
+          <span style="color: #E02814; font-weight: 700;">STRENGTH & POWER</span>
+        </nav>
+
+        <span class="pd-kicker">STRENGTH & POWER</span>
+        <h1 class="pd-hero-title" id="program-title">STRENGTH & POWER</h1>
+        <p class="pd-hero-lead">Progressive barbell and compound movement training designed around measurable performance, technical precision, and unbreakable foundations.</p>
+
+        <!-- 4 Key Specs Strip -->
+        <div class="pd-specs-strip">
+          
+          <div class="pd-spec-item">
+            <span class="pd-spec-val">12 WEEKS</span>
+            <span class="pd-spec-lbl">PROGRAM LENGTH</span>
+          </div>
+          <div class="pd-spec-item">
+            <span class="pd-spec-val">3–4 DAYS / WEEK</span>
+            <span class="pd-spec-lbl">TRAINING</span>
+          </div>
+          <div class="pd-spec-item">
+            <span class="pd-spec-val">70–75 MIN</span>
+            <span class="pd-spec-lbl">SESSION TIME</span>
+          </div>
+          <div class="pd-spec-item">
+            <span class="pd-spec-val">ALL LEVELS</span>
+            <span class="pd-spec-lbl">EXPERIENCE LEVEL</span>
+          </div>
+        </div>
+
+        <div class="pd-hero-actions">
+          <a href="/#contact" class="btn-pd-trial">
+            START 7-DAY FREE TRIAL &rarr;
+          </a>
+          <a href="/programs" class="pd-breadcrumb-link" style="font-weight: 700; font-size: 0.85rem;">
+            &larr; ALL PROGRAMS
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — 7-DAY SAMPLE TRAINING SCHEDULE (White UI)
+         ========================================================================== -->
+    <section class="pd-schedule-section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        
+        <header class="pd-section-header">
+          <span class="pd-kicker">SAMPLE TRAINING SPLIT</span>
+          <h2 class="pd-section-title" id="schedule-heading">7-DAY TRAINING SCHEDULE</h2>
+          <p class="pd-section-lead">Click each day to explore the exercise split, target reps, and coach cues.</p>
+        </header>
+
+        <!-- Day Selector Tabs -->
+        <div class="pd-day-tabs" role="tablist" aria-label="7-Day Training Days">
+          
+          <button 
+            type="button" 
+            class="pd-day-tab active" 
+            role="tab" 
+            aria-selected="true"
+            data-day="mon"
+          >
+            MON
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="tue"
+          >
+            TUE
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="wed"
+          >
+            WED
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="thu"
+          >
+            THU
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="fri"
+          >
+            FRI
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="sat"
+          >
+            SAT
+          </button>
+          <button 
+            type="button" 
+            class="pd-day-tab " 
+            role="tab" 
+            aria-selected="false"
+            data-day="sun"
+          >
+            SUN
+          </button>
+        </div>
+
+        <!-- Day Details Container -->
+        <div class="pd-schedule-cards-container">
+          
+          <article 
+            class="pd-day-card" 
+            id="day-panel-mon" 
+            style="display: block;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">SQUAT & LOWER BODY STRENGTH</h3>
+                <p class="pd-day-sub">Back Squat (Heavy Sets), Bulgarian Split Squats, RDLs & Core Bracing</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ 70 MIN</span>
+                <span class="pd-meta-pill pill-intensity">HIGH (85% 1RM)</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Competition Barbell Back Squat — 4 sets × 5 reps @ RPE 8</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Bulgarian Dumbbell Split Squats — 3 sets × 8 reps / leg</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Romanian Deadlift (RDL) — 3 sets × 10 reps (3-sec eccentric)</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Hanging Leg Raises & Standing Calf Raises — 3 sets × 15 reps</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Maintain intra-abdominal pressure (Valsalva) throughout the descent. Drive through the full foot on the ascent."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-tue" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">RECOVERY & MOBILITY FLOW</h3>
+                <p class="pd-day-sub">Hip Flow, Ankle Dorsiflexion, Banded Upper Back Work & 20 min Light Aerobic</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ 40 MIN</span>
+                <span class="pd-meta-pill pill-intensity">LOW / RESTORATIVE</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">90/90 Hip Flow & Frog Stretch — 3 rounds × 60 sec</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Thoracic Spine Foam Rolling & Cat-Cow — 3 sets × 10 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Banded Face Pulls & Rotator Cuff External Rotations — 3 sets × 20 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Nasal Breathing Incline Treadmill Walk — 20 minutes (Zone 2)</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Keep your heart rate strictly below 130 BPM. Today is dedicated to flushing lactic acid and restoring joint mobility."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-wed" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">BENCH PRESS & UPPER STRENGTH</h3>
+                <p class="pd-day-sub">Competition Bench Press, Pendlay Rows, Overhead Press & Dips</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ 70 MIN</span>
+                <span class="pd-meta-pill pill-intensity">HIGH (85% 1RM)</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Competition Flat Barbell Bench Press — 4 sets × 5 reps @ RPE 8</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Strict Standing Overhead Press (OHP) — 3 sets × 6 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Pendlay Barbell Rows (Dead-stop) — 4 sets × 8 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Weighted Tricep Dips & Face Pulls — 3 sets × 12 reps</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Keep your shoulder blades retracted and depressed into the bench. Maintain tight leg drive throughout each repetition."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-thu" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">ACTIVE REST & DECOMPRESSION</h3>
+                <p class="pd-day-sub">Parasympathetic Restoration, Tissue Hydration & Mobility Drills</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ REST</span>
+                <span class="pd-meta-pill pill-intensity">RECOVERY</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Spinal Decompression (Passive Dead Hangs) — 3 sets × 45 sec</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Diaphragmatic Box Breathing (4-4-4-4) — 10 minutes</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Full Body Foam Rolling & Soft Tissue Work — 15 minutes</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Targeted 8,000 Step Daily Walk Outdoors</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Focus on sleep hygiene and protein distribution today. Central nervous system recovery is where strength solidifies."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-fri" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">DEADLIFT & POSTERIOR CHAIN</h3>
+                <p class="pd-day-sub">Conventional/Sumo Deadlift, Front Squats, Hamstring Curls & Farmer Carries</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ 75 MIN</span>
+                <span class="pd-meta-pill pill-intensity">MAX (90% 1RM)</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Conventional Barbell Deadlift — 3 sets × 4 reps @ RPE 8.5</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Barbell Front Squats (Quad Focus) — 3 sets × 6 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Lying Hamstring Leg Curls (Plate-Loaded) — 4 sets × 10 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Heavy Trap Bar Farmer Carries — 4 sets × 40 meters</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Take the slack out of the barbell before breaking the floor. Wedge your hips and pull through your lats and glutes."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-sat" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">DYNAMIC POWER & ACCESSORIES</h3>
+                <p class="pd-day-sub">Speed Bench, Trap Bar Jumps, Face Pulls, Biceps & Triceps Work</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ 60 MIN</span>
+                <span class="pd-meta-pill pill-intensity">MODERATE (SPEED)</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Speed Dynamic Bench Press — 6 sets × 3 reps @ 65% 1RM (Max Acceleration)</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Trap Bar Explosive Jumps — 4 sets × 4 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Incline Dumbbell Bicep Curls — 3 sets × 12 reps</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Overhead Rope Tricep Extensions & Lateral Raises — 3 sets × 15 reps</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Move the barbell with maximum velocity on every single rep. Speed creates neuromuscular recruitment."</p>
+            </div>
+
+          </article>
+          <article 
+            class="pd-day-card" 
+            id="day-panel-sun" 
+            style="display: none;"
+          >
+            <div class="pd-day-header">
+              <div>
+                <h3 class="pd-day-name">FULL RECOVERY & PROTOCOL CHECK</h3>
+                <p class="pd-day-sub">Nutritional Loading, Sleep Optimization & Next Week Load Preparation</p>
+              </div>
+              <div class="pd-day-meta">
+                <span class="pd-meta-pill">⏱ REST</span>
+                <span class="pd-meta-pill pill-intensity">RECOVERY</span>
+              </div>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div class="pd-exercises-grid">
+              
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Complete Rest — Zero Heavy Loading</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Weekly Training Log & 1RM Progression Review with Coach</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">Hydration Loading (3.5L Water + Electrolytes)</span>
+              </div>
+              <div class="pd-exercise-item">
+                <span class="pd-exercise-bullet">✓</span>
+                <span class="pd-exercise-text">8+ Hours Uninterrupted Sleep Cycle</span>
+              </div>
+            </div>
+
+            <!-- Coach Cue -->
+            
+            <div class="pd-coach-cue-box">
+              <span class="pd-cue-title">HEAD COACH EXECUTION CUE:</span>
+              <p class="pd-cue-text">"Review your weekly tonnage numbers in the training log and prepare your mindset for next week’s progression schema."</p>
+            </div>
+
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — WHAT'S INCLUDED (White UI)
+         ========================================================================== -->
+    <section class="pd-inclusions-section" aria-labelledby="inclusions-heading">
+      <div class="container">
+        
+        <header class="pd-section-header">
+          <span class="pd-kicker">ALL-INCLUSIVE PROTOCOL</span>
+          <h2 class="pd-section-title" id="inclusions-heading">WHAT'S INCLUDED IN THIS PROGRAM</h2>
+          <p class="pd-section-lead">Everything you need for guaranteed, injury-free progression.</p>
+        </header>
+
+        <div class="pd-inclusions-grid">
+          
+          <div class="pd-inclusion-card">
+            <svg class="pd-inclusion-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h3 class="pd-inclusion-title">12-WEEK PERIODIZED STRENGTH BLUEPRINT</h3>
+            <p class="pd-inclusion-desc">Methodical linear and undulating periodization cycles targeting the squat, bench, deadlift, and overhead press.</p>
+          </div>
+          <div class="pd-inclusion-card">
+            <svg class="pd-inclusion-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h3 class="pd-inclusion-title">REAL-TIME FORM & BAR PATH CUEING</h3>
+            <p class="pd-inclusion-desc">Dedicated coach oversight on every primary set to ensure optimal bracing, joint alignment, and safety.</p>
+          </div>
+          <div class="pd-inclusion-card">
+            <svg class="pd-inclusion-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h3 class="pd-inclusion-title">CALIBRATED 1RM ESTIMATIONS & LOAD LOGS</h3>
+            <p class="pd-inclusion-desc">Weekly tracking of working volume and estimated 1-rep maxes without risky maximal testing every session.</p>
+          </div>
+          <div class="pd-inclusion-card">
+            <svg class="pd-inclusion-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h3 class="pd-inclusion-title">ROGUE MONSTER RACKS & ELEIKO ACCESS</h3>
+            <p class="pd-inclusion-desc">Unrestricted access to calibrated steel plates, Olympic lifting platforms, and competition-grade power racks.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — ASSIGNED LEAD COACH & CONSULTATION CTA
+         ========================================================================== -->
+    <section class="pd-coach-section" aria-labelledby="coach-heading">
+      <div class="container">
+        
+        <div class="pd-coach-card">
+          <img src="/assets/images/trainer-alex.jpg" alt="ALEX RIVERA" class="pd-coach-avatar" loading="lazy">
+          <div class="pd-coach-info">
+            <span class="pd-coach-role">Head of Strength & Power</span>
+            <h3 class="pd-coach-name">ALEX RIVERA</h3>
+            <p class="pd-coach-bio">Certified CSCS coach with 12+ years experience coaching competitive powerlifters and strength athletes.</p>
+            <div>
+              <a href="/#contact" class="btn-pd-trial">
+                BOOK FREE TRIAL WITH COACH ALEX &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main-grid footer-4-col" style="grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;">
+        
+        <!-- Column 1: Brand & Social -->
+        <div class="footer-brand-col">
+          <a href="/#hero" class="footer-brand-logo" aria-label="Ironforge Fitness Home">
+            <div class="brand-icon-wrapper" aria-hidden="true">
+              <svg class="brand-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 6h16v2H4V6zm1 3h14v2l-2 3H7L5 9zm4 6h6v4h3v2H6v-2h3v-4z"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name-main">IRONFORGE</span>
+              <span class="brand-name-sub">FITNESS</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc" style="margin-top: var(--space-4);">
+            Ahmedabad's premier strength, conditioning, and performance facility. Built for those who refuse to settle.
+          </p>
+          <div class="footer-social-list" role="list">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.79-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.593 0 9 1.582 9 4.615V8z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Programs -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">PROGRAMS</h4>
+          <ul class="footer-links-list">
+            <li><a href="/programs/strength-power" class="footer-link">Strength &amp; Power</a></li>
+            <li><a href="/programs/muscle-building" class="footer-link">Muscle Building</a></li>
+            <li><a href="/programs/fat-loss" class="footer-link">Fat Loss &amp; Conditioning</a></li>
+            <li><a href="/programs/personal-training" class="footer-link">Personal Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Navigation -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">NAVIGATION</h4>
+          <ul class="footer-links-list">
+            <li><a href="/#hero" class="footer-link">Home</a></li>
+            <li><a href="/programs" class="footer-link active" style="color: var(--color-accent);">Programs</a></li>
+            <li><a href="/facilities" class="footer-link">Facilities</a></li>
+            <li><a href="/trainers" class="footer-link">Trainers</a></li>
+            <li><a href="/membership" class="footer-link">Membership</a></li>
+            <li><a href="/transformations" class="footer-link">Transformations</a></li>
+            <li><a href="/location" class="footer-link">Location</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">CONTACT</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">Phone</span>
+              <a href="tel:+919876543210" class="footer-contact-val">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">Email</span>
+              <a href="mailto:hello@ironforgefitness.demo" class="footer-contact-val">hello@ironforgefitness.demo</a>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">Location</span>
+              <span class="footer-contact-val" style="font-size: 0.82rem; line-height: 1.4;">Plot 42, Westgate Boulevard, Near SG Highway, Ahmedabad 380054</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 5: Hours -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">HOURS</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">Mon – Fri</span>
+              <span class="footer-contact-val">6:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-label">Sat – Sun</span>
+              <span class="footer-contact-val">7:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 IRONFORGE FITNESS. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="/#hero" class="footer-legal-link">Privacy Policy</a>
+          <a href="/#hero" class="footer-legal-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Action — WhatsApp Only -->
+  <aside class="floating-actions-container" id="floating-actions-container" aria-label="Quick contact">
+    <a href="https://wa.me/919876543210?text=Hi%20IRONFORGE%20Fitness,%20I'd%20like%20to%20learn%20more%20about%20the%20STRENGTH%20%26%20POWER%20program." target="_blank" rel="noopener noreferrer" class="floating-action-btn floating-btn-whatsapp" id="btn-floating-whatsapp" aria-label="Chat on WhatsApp" data-tooltip="Chat on WhatsApp">
+      <span class="floating-icon-wrapper" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+      </span>
+      <span class="floating-tooltip" aria-hidden="true">Chat on WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- Interactive Day Selector Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dayTabs = document.querySelectorAll('.pd-day-tab');
+      const dayCards = document.querySelectorAll('.pd-day-card');
+
+      dayTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const day = this.getAttribute('data-day');
+
+          dayTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          dayCards.forEach(card => {
+            if (card.id === 'day-panel-' + day) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- Core Scripts -->
+  <script src="/js/main.js?v=20260828"></script>
+</body>
+</html>

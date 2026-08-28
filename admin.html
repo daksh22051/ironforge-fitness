@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Admin Dashboard | IRONFORGE FITNESS Management</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0F172A">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Admin Dedicated Stylesheet -->
+  <link rel="stylesheet" href="/css/admin.css?v=20260828">
+</head>
+<body class="admin-body">
+
+  <!-- Backdrop for Mobile Sidebar -->
+  <div class="admin-backdrop" id="admin-backdrop" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       SIDEBAR NAVIGATION
+       ========================================================================== -->
+  <aside class="admin-sidebar" id="admin-sidebar" aria-label="Admin Navigation">
+    
+    <!-- Sidebar Brand -->
+    <div class="admin-sidebar-header">
+      <div class="admin-brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 6h16v2H4V6zm1 3h14v2l-2 3H7L5 9zm4 6h6v4h3v2H6v-2h3v-4z"/>
+        </svg>
+      </div>
+      <div class="admin-brand-text">
+        <span class="admin-brand-title">IRONFORGE</span>
+        <span class="admin-brand-sub">ADMIN PANEL</span>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="admin-nav" role="navigation">
+      <button type="button" class="admin-nav-item active" data-view="dashboard" id="nav-item-dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Dashboard</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-view="leads" id="nav-item-leads">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span>Free Trial Leads</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-view="memberships" id="nav-item-memberships">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+          <line x1="1" y1="10" x2="23" y2="10"></line>
+        </svg>
+        <span>Memberships</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-view="messages" id="nav-item-messages">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>Contact Messages</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-view="settings" id="nav-item-settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <span>Settings</span>
+      </button>
+    </nav>
+
+    <!-- Sidebar Footer -->
+    <div class="admin-sidebar-footer">
+      <button type="button" class="admin-logout-btn" id="admin-logout-btn" aria-label="Log Out">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Log Out</span>
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <div class="admin-main-wrap">
+    
+    <!-- Topbar Header -->
+    <header class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button type="button" class="admin-mobile-toggle" id="admin-mobile-toggle-btn" aria-label="Toggle Sidebar Navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div>
+          <h1 class="admin-header-title" id="page-header-title">Dashboard</h1>
+          <p class="admin-header-sub" id="page-header-sub">IRONFORGE FITNESS Management</p>
+        </div>
+      </div>
+
+      <div class="admin-topbar-right">
+        <button type="button" class="admin-refresh-btn" id="admin-refresh-btn" title="Refresh Live Data">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          <span>Refresh</span>
+        </button>
+
+        <div class="admin-badge-live">
+          <span class="admin-badge-dot"></span>
+          <span>SQLite Connected</span>
+        </div>
+
+        <div class="admin-user-pill">
+          <div class="admin-avatar">A</div>
+          <span class="admin-user-name">Administrator</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="admin-content">
+      
+      <!-- ====================================================================
+           VIEW 1: DASHBOARD
+           ==================================================================== -->
+      <div class="admin-view-panel active" id="view-dashboard">
+        
+        <!-- 4 Summary Metric Cards (Live Real Data) -->
+        <section class="admin-metrics-grid" aria-label="Summary Metrics">
+          
+          <!-- Card 1: Free Trials -->
+          <article class="admin-metric-card">
+            <div class="admin-metric-head">
+              <span class="admin-metric-title">Total Free Trials</span>
+              <div class="admin-metric-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <polyline points="17 11 19 13 23 9"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-metric-value" id="metric-free-trials">--</div>
+            <div class="admin-metric-note">Total 7-day trial pass claims</div>
+          </article>
+
+          <!-- Card 2: Membership Enrollments -->
+          <article class="admin-metric-card">
+            <div class="admin-metric-head">
+              <span class="admin-metric-title">Membership Enrollments</span>
+              <div class="admin-metric-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-metric-value" id="metric-memberships">--</div>
+            <div class="admin-metric-note">Active membership applications</div>
+          </article>
+
+          <!-- Card 3: Contact Messages -->
+          <article class="admin-metric-card">
+            <div class="admin-metric-head">
+              <span class="admin-metric-title">Contact Messages</span>
+              <div class="admin-metric-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-metric-value" id="metric-messages">--</div>
+            <div class="admin-metric-note">Inbound visitor inquiries</div>
+          </article>
+
+          <!-- Card 4: New Leads (Last 7 Days) -->
+          <article class="admin-metric-card">
+            <div class="admin-metric-head">
+              <span class="admin-metric-title">New Leads (Last 7 Days)</span>
+              <div class="admin-metric-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-metric-value" id="metric-new-leads">--</div>
+            <div class="admin-metric-note">Recent trial registrations</div>
+          </article>
+
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section class="admin-card-section" aria-labelledby="recent-activity-title">
+          <div class="admin-card-header">
+            <h2 class="admin-card-title" id="recent-activity-title">Recent Activity</h2>
+          </div>
+
+          <div id="recent-activity-container">
+            <div class="admin-empty-state">
+              <p class="admin-empty-text">Loading recent activity...</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ====================================================================
+           VIEW 2: FREE TRIAL LEADS
+           ==================================================================== -->
+      <div class="admin-view-panel" id="view-leads">
+        <section class="admin-card-section">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Free Trial Leads</h2>
+              <p style="font-size: 0.78rem; color: #64748B; margin-top: 2px;">Real-time records from SQLite `leads` table</p>
+            </div>
+            <div class="admin-card-tools">
+              <input type="text" id="search-leads" class="admin-search-input" placeholder="Search by name, phone, email...">
+            </div>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-data-table" id="table-leads">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Customer Name</th>
+                  <th>Phone Number</th>
+                  <th>Email Address</th>
+                  <th>Primary Goal</th>
+                  <th>Preferred Time</th>
+                  <th>Experience</th>
+                  <th>WhatsApp</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-leads">
+                <tr><td colspan="9" style="text-align: center; padding: 2rem;">Loading leads...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ====================================================================
+           VIEW 3: MEMBERSHIPS
+           ==================================================================== -->
+      <div class="admin-view-panel" id="view-memberships">
+        <section class="admin-card-section">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Membership Enrollments</h2>
+              <p style="font-size: 0.78rem; color: #64748B; margin-top: 2px;">Real-time records from SQLite `membership_enrollments` table</p>
+            </div>
+            <div class="admin-card-tools">
+              <input type="text" id="search-memberships" class="admin-search-input" placeholder="Search by member, plan, phone...">
+            </div>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-data-table" id="table-memberships">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Member Name</th>
+                  <th>Phone Number</th>
+                  <th>Email Address</th>
+                  <th>Plan Tier</th>
+                  <th>Billing Cycle</th>
+                  <th>Price</th>
+                  <th>Start Date</th>
+                  <th>Status</th>
+                  <th>Enrolled At</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-memberships">
+                <tr><td colspan="10" style="text-align: center; padding: 2rem;">Loading memberships...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ====================================================================
+           VIEW 4: CONTACT MESSAGES
+           ==================================================================== -->
+      <div class="admin-view-panel" id="view-messages">
+        <section class="admin-card-section">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Contact Messages</h2>
+              <p style="font-size: 0.78rem; color: #64748B; margin-top: 2px;">Inbound visitor inquiries from SQLite `contact_messages` table</p>
+            </div>
+            <div class="admin-card-tools">
+              <input type="text" id="search-messages" class="admin-search-input" placeholder="Search by sender, subject, phone...">
+            </div>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-data-table" id="table-messages">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Sender Name</th>
+                  <th>Email Address</th>
+                  <th>Phone</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                  <th>Status</th>
+                  <th>Submitted At</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-messages">
+                <tr><td colspan="8" style="text-align: center; padding: 2rem;">Loading messages...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ====================================================================
+           VIEW 5: SETTINGS
+           ==================================================================== -->
+      <div class="admin-view-panel" id="view-settings">
+        <section class="admin-card-section" style="padding: 1.5rem;">
+          <h2 class="admin-card-title" style="margin-bottom: 1rem;">System &amp; Gym Configuration</h2>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <div style="background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1.25rem;">
+              <h4 style="font-size: 0.85rem; font-weight: 800; color: #0F172A; margin-bottom: 0.5rem; text-transform: uppercase;">Facility Information</h4>
+              <p style="font-size: 0.82rem; color: #4B5563; line-height: 1.6;">
+                <strong>Brand:</strong> IRONFORGE FITNESS<br>
+                <strong>Location:</strong> Plot 42, Westgate Boulevard, Near SG Highway, Ahmedabad 380054<br>
+                <strong>Phone:</strong> +91 98765 43210<br>
+                <strong>Email:</strong> hello@ironforgefitness.demo
+              </p>
+            </div>
+
+            <div style="background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1.25rem;">
+              <h4 style="font-size: 0.85rem; font-weight: 800; color: #0F172A; margin-bottom: 0.5rem; text-transform: uppercase;">Database Connection</h4>
+              <p style="font-size: 0.82rem; color: #4B5563; line-height: 1.6;">
+                <strong>Engine:</strong> SQLite 3 via Node.js native <code>node:sqlite</code><br>
+                <strong>Path:</strong> <code>data/ironforge.db</code><br>
+                <strong>Status:</strong> <span class="admin-pill admin-pill-green">Active &amp; Persistent</span><br>
+                <strong>Security:</strong> Direct static access protected (403 Forbidden)
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Dedicated Admin Script -->
+  <script src="/js/admin.js?v=20260828"></script>
+</body>
+</html>

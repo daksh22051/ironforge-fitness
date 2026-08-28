@@ -1,0 +1,402 @@
+/* ==========================================================================
+   IRONFORGE FITNESS - Facilities Page Stylesheet
+   Pure, Ultra-Clean White UI (Zero Fluff, Clean Training Zones)
+   ========================================================================== */
+
+.facilities-page-body {
+  background-color: #FAFAFA;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-accent-red {
+  color: #E02814 !important;
+}
+
+/* ==========================================================================
+   SECTION 1 — HERO SECTION (White UI)
+   ========================================================================== */
+.fac-hero {
+  background-color: #FFFFFF;
+  padding-top: calc(85px + 3rem);
+  padding-bottom: 3.25rem;
+  border-bottom: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.fac-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 0.85rem;
+}
+
+.fac-breadcrumb-link {
+  color: #6B7280;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.fac-breadcrumb-link:hover {
+  color: #E02814;
+}
+
+.fac-kicker {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E02814;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.fac-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(2.3rem, 1.9rem + 1.8vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 auto 0.85rem auto;
+  max-width: 780px;
+}
+
+.fac-hero-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4B5563;
+  max-width: 660px;
+  margin: 0 auto 2.5rem auto;
+}
+
+/* Filter Bar */
+.fac-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.fac-filter-btn {
+  padding: 0.55rem 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #4B5563;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.fac-filter-btn:hover {
+  border-color: #9CA3AF;
+  color: #111827;
+  background-color: #F9FAFB;
+}
+
+.fac-filter-btn.active {
+  background-color: #0F172A;
+  border-color: #0F172A;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+/* ==========================================================================
+   SECTION 2 — 6 TRAINING ZONES GRID (White UI)
+   ========================================================================== */
+.fac-zones-section {
+  padding: 4rem 0 5.5rem;
+  background-color: #FAFAFA;
+}
+
+.fac-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+}
+
+.fac-zone-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.fac-zone-card:hover {
+  transform: translateY(-5px);
+  border-color: #CBD5E1;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Media Box */
+.fac-zone-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.fac-zone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.fac-zone-card:hover .fac-zone-img {
+  transform: scale(1.05);
+}
+
+.fac-zone-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.fac-zone-num {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #E02814;
+  color: #FFFFFF;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* Body Content */
+.fac-zone-body {
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fac-zone-kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E02814;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.fac-zone-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #0F172A;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.25;
+}
+
+.fac-zone-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4B5563;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Equipment List */
+.fac-equipment-block {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.fac-equip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fac-equip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.fac-equip-bullet {
+  color: #059669;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.btn-zone-trial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-zone-trial:hover {
+  background-color: #E02814;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SECTION 3 — FACILITY FAQS (White UI Accordion)
+   ========================================================================== */
+.fac-faq-section {
+  padding: 4rem 0 5.5rem;
+  background-color: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+}
+
+.fac-faq-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.fac-faq-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(1.8rem, 1.5rem + 0.8vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 0 0.35rem 0;
+}
+
+.fac-faq-lead {
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.fac-faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fac-faq-item {
+  background-color: #FAFAFA;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.fac-faq-item.is-open {
+  border-color: #CBD5E1;
+  background-color: #FFFFFF;
+}
+
+.fac-faq-question {
+  width: 100%;
+  padding: 1.1rem 1.35rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  cursor: pointer;
+}
+
+.fac-faq-chevron {
+  width: 16px;
+  height: 16px;
+  color: #E02814;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.fac-faq-item.is-open .fac-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.fac-faq-answer {
+  display: none;
+  padding: 0 1.35rem 1.15rem 1.35rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4B5563;
+  border-top: 1px solid #F3F4F6;
+  padding-top: 0.85rem;
+}
+
+.fac-faq-item.is-open .fac-faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .fac-zones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fac-hero {
+    padding-top: calc(85px + 1.5rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .fac-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

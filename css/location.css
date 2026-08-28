@@ -1,0 +1,539 @@
+/* ==========================================================================
+   IRONFORGE FITNESS - Location Page Stylesheet
+   Ultra-Clean, Zero-Fluff White UI
+   ========================================================================== */
+
+.location-page-body {
+  background-color: #FAFAFA;
+  color: #111827;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+}
+
+.text-accent-red,
+.loc-text-accent {
+  color: #E02814 !important;
+}
+
+/* ==========================================================================
+   SECTION 1 — HERO SECTION
+   ========================================================================== */
+.loc-hero-section {
+  position: relative;
+  background-color: #FFFFFF;
+  padding-top: calc(85px + 2.75rem);
+  padding-bottom: 3.25rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.loc-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.loc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 0.85rem;
+}
+
+.loc-breadcrumb a {
+  color: #6B7280;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.loc-breadcrumb a:hover {
+  color: #E02814;
+}
+
+.loc-breadcrumb-active {
+  color: #E02814;
+  font-weight: 700;
+}
+
+.loc-hero-heading {
+  font-family: var(--font-body);
+  font-size: clamp(2.3rem, 1.9rem + 1.8vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 0 0.9rem 0;
+}
+
+.loc-hero-lead {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #4B5563;
+  margin-bottom: 1.75rem;
+  max-width: 520px;
+}
+
+.loc-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-loc-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.88rem 1.85rem;
+  background-color: #E02814;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(224, 40, 20, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-loc-primary:hover {
+  background-color: #C8200E;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224, 40, 20, 0.4);
+  color: #FFFFFF;
+}
+
+.btn-loc-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.88rem 1.85rem;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #D1D5DB;
+  transition: all var(--transition-fast);
+}
+
+.btn-loc-secondary:hover {
+  background-color: #F9FAFB;
+  border-color: #9CA3AF;
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+.btn-loc-secondary svg {
+  width: 18px;
+  height: 18px;
+  color: #16A34A;
+}
+
+.loc-hero-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.loc-hero-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   SECTION 2 — AT A GLANCE (Tight Horizontal Strip)
+   ========================================================================== */
+.loc-glance-section {
+  background-color: #FAFAFA;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 1.15rem 0;
+}
+
+.loc-glance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.loc-glance-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.25rem 1.25rem;
+  position: relative;
+}
+
+.loc-glance-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 26px;
+  width: 1px;
+  background-color: #E5E7EB;
+}
+
+.loc-glance-item:last-child::after {
+  display: none;
+}
+
+.loc-glance-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(224, 40, 20, 0.08);
+  border: 1px solid rgba(224, 40, 20, 0.2);
+  color: #E02814;
+  flex-shrink: 0;
+}
+
+.loc-glance-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.loc-glance-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.loc-glance-title {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.loc-glance-desc {
+  font-size: 0.76rem;
+  color: #6B7280;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 3 — LOCATION & ACCESS (FIND IRONFORGE)
+   ========================================================================== */
+.loc-find-section {
+  padding: 4rem 0;
+  background-color: #FAFAFA;
+}
+
+.loc-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.loc-section-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #E02814;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.loc-section-heading {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 1.7rem + 1vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 0 0.45rem 0;
+}
+
+.loc-section-desc {
+  font-size: 0.98rem;
+  color: #4B5563;
+  max-width: 580px;
+  margin: 0;
+}
+
+.loc-find-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+.loc-find-details {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.loc-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.loc-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.loc-detail-icon {
+  width: 20px;
+  height: 20px;
+  color: #E02814;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.loc-detail-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6B7280;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.loc-detail-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.45;
+}
+
+.loc-detail-value a {
+  color: #0F172A;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.loc-detail-value a:hover {
+  color: #E02814;
+}
+
+.loc-landmark-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #E02814;
+  background-color: rgba(224, 40, 20, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* Map Container */
+.loc-find-map-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  background-color: #EEF2F7;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loc-find-map-svg {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  display: block;
+}
+
+.loc-map-btn-overlay {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background-color: #E02814;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.65rem 1.15rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(224, 40, 20, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.loc-map-btn-overlay:hover {
+  background-color: #C8200E;
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SECTION 4 — FAQ ACCORDION (Clean White UI)
+   ========================================================================== */
+.loc-faq-section {
+  padding: 3.5rem 0 5rem;
+  background-color: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+}
+
+.loc-faq-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.25rem;
+}
+
+.loc-faq-title {
+  font-family: var(--font-body);
+  font-size: clamp(1.8rem, 1.5rem + 0.8vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem 0;
+}
+
+.loc-faq-lead {
+  font-size: 0.92rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.loc-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.loc-faq-item {
+  background-color: #FAFAFA;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.loc-faq-item[open] {
+  border-color: #CBD5E1;
+  background-color: #FFFFFF;
+}
+
+.loc-faq-summary {
+  padding: 0.95rem 1.25rem;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #0F172A;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  list-style: none;
+}
+
+.loc-faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.loc-faq-chevron {
+  width: 16px;
+  height: 16px;
+  color: #E02814;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.loc-faq-item[open] .loc-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.loc-faq-content {
+  padding: 0 1.25rem 1rem 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4B5563;
+  border-top: 1px solid #F3F4F6;
+  padding-top: 0.75rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .loc-hero-container,
+  .loc-find-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .loc-glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+
+  .loc-glance-item:nth-child(2)::after,
+  .loc-glance-item:nth-child(4)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .loc-hero-section {
+    padding-top: calc(85px + 1.5rem);
+    padding-bottom: 2.25rem;
+  }
+
+  .loc-glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.85rem;
+  }
+
+  .loc-glance-item {
+    padding: 0.25rem 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .loc-find-map-wrapper {
+    min-height: 320px;
+  }
+
+  .loc-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-loc-primary,
+  .btn-loc-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

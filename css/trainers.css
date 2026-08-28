@@ -1,0 +1,246 @@
+/* ==========================================================================
+   IRONFORGE FITNESS - Trainers & Coaching Page Stylesheet
+   Pure, Ultra-Clean White UI (Zero Fluff, High-End Athletic Design)
+   ========================================================================== */
+
+.trainers-page-body {
+  background-color: #FAFAFA;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-accent-red {
+  color: #E02814 !important;
+}
+
+/* ==========================================================================
+   SECTION 1 — HERO SECTION (White UI)
+   ========================================================================== */
+.trainers-hero {
+  background-color: #FFFFFF;
+  padding-top: calc(85px + 3rem);
+  padding-bottom: 3.25rem;
+  border-bottom: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.trainers-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 0.85rem;
+}
+
+.trainers-breadcrumb a {
+  color: #6B7280;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.trainers-breadcrumb a:hover {
+  color: #E02814;
+}
+
+.trainers-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E02814;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.trainers-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(2.3rem, 1.9rem + 1.8vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #0F172A;
+  text-transform: uppercase;
+  margin: 0 auto 0.85rem auto;
+  max-width: 760px;
+}
+
+.trainers-hero-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4B5563;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   SECTION 2 — 4-COLUMN TRAINERS GRID (White UI)
+   ========================================================================== */
+.trainers-grid-section {
+  padding: 4rem 0 5.5rem;
+  background-color: #FAFAFA;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.trainer-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  border-color: #CBD5E1;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Trainer Portrait Media */
+.trainer-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.trainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.trainer-card:hover .trainer-img {
+  transform: scale(1.04);
+}
+
+.trainer-role-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Trainer Info Body */
+.trainer-body {
+  padding: 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trainer-name {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #0F172A;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.trainer-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #E02814;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.trainer-bio {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #4B5563;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Credentials / Specialties */
+.trainer-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.trainer-spec-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #334155;
+  background-color: #F1F5F9;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-book-trainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-book-trainer:hover {
+  background-color: #E02814;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-hero {
+    padding-top: calc(85px + 1.5rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ironforge-fitness",
+  "version": "1.0.0",
+  "description": "IRONFORGE FITNESS - High Performance Gym Website and Management Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "backup": "node scripts/backup_db.js",
+    "migrate": "node scripts/migrate_sqlite_to_pg.js",
+    "test": "node scratch/pre_launch_qa_audit.js && node scratch/test_admin_step3_auth.js"
+  },
+  "keywords": [
+    "fitness",
+    "gym",
+    "admin-dashboard",
+    "nodejs",
+    "sqlite"
+  ],
+  "author": "IRONFORGE Engineering",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "optionalDependencies": {
+    "pg": "^8.13.0"
+  }
+}

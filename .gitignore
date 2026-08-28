@@ -1,0 +1,22 @@
+# SQLite Database and Persistent Data
+data/
+*.db
+*.sqlite
+*.sqlite3
+backups/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Development scratch scripts
+scratch/
